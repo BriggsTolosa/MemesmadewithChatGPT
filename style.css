@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('whitebeard-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+h1:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.gallery {
+    margin-top: 20px;
+}
+
+.memes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.memes img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.memes img:hover {
+    transform: scale(1.1);
+}
+
+/* Add responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .memes {
+        grid-template-columns: 1fr;
+    }
+}
